@@ -1,0 +1,13 @@
+/* pages/my/other_attestation/other_attestation.wxss */
+.list_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    color: #686868;
+}
+.list_box .van-icon{
+    transform: translateY(4rpx)
+}

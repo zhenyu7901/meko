@@ -1,0 +1,12 @@
+<!--pages/my/id_attestation/id_attestation.wxml-->
+<view  class='content_box'>
+
+<view bindtap='selectpicture'>
+    <view class='image' wx:if="{{!src}}">
+        <text>点击拍摄或相册\n选择身份证正面上传</text>
+    </view>
+    <image src='{{src}}' class='image' wx:else mode="aspectFill"></image>
+
+</view>
+    <van-button type="primary" bindtap='onsubmit'>主要按钮</van-button>
+    </view>

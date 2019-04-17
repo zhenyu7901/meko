@@ -1,0 +1,59 @@
+<!--pages/my/data/data.wxml-->
+
+<view class='list_box'>
+    <text>头像</text>
+    <view class='list_right'>
+        <image src='{{src}}'></image>
+        <van-icon name="arrow" />
+    </view>
+</view>
+<view class='list_box'>
+    <text>昵称（必填）</text>
+    <input class='name' value='{{name}}' bindtap='getname'></input>
+</view>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class='list_box'>
+        <text>性别（必填）</text>
+        <view  class='list_right'>
+            <text>{{array[index]}}</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</picker>
+<picker mode="date" value="{{date}}" start="1950-01-01" end="2020-01-01" bindchange="bindDateChange">
+    <view class='list_box'>
+        <text>生日（必填）</text>
+        <view  class='list_right'>
+            <text>{{date}}</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</picker>
+<picker bindchange="feelchange" value="{{feelindex}}" range="{{feeling}}">
+    <view class='list_box'>
+        <text>感情状态 （必填）</text>
+        <view  class='list_right'>
+            <text>{{feeling[feelindex]}}</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</picker>
+<view class='list_box'>
+    <text>兴趣爱好</text>
+    <view class='list_right'>
+        <text>{{interest.length}}/100</text>
+    </view>
+</view>
+<view class='list_box' style='min-height:100rpx;'>
+    <textarea  value='{{interest}}' maxlength="100" auto-height placeholder="写下你的兴趣爱好可以帮你结识更多志同道合的朋友哦~" bindinput='getinterest'></textarea >
+</view>
+<view class='list_box'>
+    <text>个性签名</text>
+    <view class='list_right'>
+        <text>{{signature.length}}/100</text>
+    </view>
+</view>
+<view class='list_box' style='min-height:100rpx;'>
+    <textarea  value='{{signature}}' maxlength="100" auto-height placeholder="吸引人的签名也是展现你个性的好方法呢~~" bindinput='getsignature'></textarea >
+</view>
+<button class='baocun' bindtap='submit'>保存</button>

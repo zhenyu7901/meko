@@ -1,0 +1,53 @@
+<!--pages/publish/publish.wxml-->
+<view class='container'>
+    <view class='title_box'>
+    <view class='text_title'>
+    <text>主</text>
+    <text> </text>
+        <text> </text>
+            <text>题</text>
+    </view>
+
+        <input placeholder='10字以内' value='{{title}}' bindinput="bindtitle"></input>
+    </view>
+    <view class='huati_box'>
+    <view class='text_title'>
+    <text>话</text>
+            <text>题</text>
+            <text>描</text>
+            <text>述</text>
+    </view>
+      
+    <textarea value='{{huati}}' placeholder="50字以内" class='huati' maxlength="50" bindinput="bindhuati"></textarea>
+    </view>
+
+
+    <view style='display:flex;align-items:center;'>
+        <image src='{{src}}' class='upload' wx:if="{{src}}" bindtap='imgYu' mode='aspectFill' data-src="{{src}}"></image>
+        <view class='upload' wx:else>
+            <van-icon name="plus" class='plus' />
+        </view>
+            </view>
+        <view class='image_box'>
+            <image class='upload' src='https://qiniu.ayouayou.com/meko/normal/1.gif' bindtap='selectsystem' data-url="1" data-src="https://qiniu.ayouayou.com/meko/normal/1.gif"></image>
+            <image class='upload' src='https://qiniu.ayouayou.com/meko/normal/2.gif' bindtap='selectsystem' data-url="2" data-src="https://qiniu.ayouayou.com/meko/normal/2.gif"></image>
+            <image class='upload' src='https://qiniu.ayouayou.com/meko/normal/3.gif' bindtap='selectsystem' data-url="3" data-src="https://qiniu.ayouayou.com/meko/normal/3.gif"></image>
+            <image class='upload' src='https://qiniu.ayouayou.com/meko/normal/4.gif' bindtap='selectsystem' data-url="4" data-src="https://qiniu.ayouayou.com/meko/normal/4.gif"></image>
+             <view class='upload' bindtap='selectimg' style='background:#ccc;'>
+            <van-icon name="photograph" class='plus' />
+        </view>
+        </view>
+
+    <view class='line'></view>
+    <view class='address' bindtap='onChangeAddress'>
+        <van-icon name="location-o" class='position' />
+        <text wx:if='{{!address}}'>请选择位置</text> {{address}}
+    </view>
+</view>
+<button class='fabu' bindtap='subupload'>发 布</button>
+
+<view class="page-body" wx:if='{{mapshow}}'>
+    <view class="page-section page-section-gap">
+        <map id="qqMap" style="width: 100%;height:0;opacity:0;margin-top:300px;" latitude="{{latitude}}" longitude="{{longitude}}" show-location></map>
+    </view>
+</view>

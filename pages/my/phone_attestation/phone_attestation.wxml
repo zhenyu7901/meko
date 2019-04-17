@@ -1,0 +1,23 @@
+<!--pages/my/phone_attestation/phone_attestation.wxml-->
+<van-cell-group>
+<van-field
+    value="{{ phone }}"
+    label="手机号"
+    placeholder="请输入手机号"
+    error-message="{{err_message}}"
+maxlength="11"
+  />
+  <van-field
+    value="{{ sms }}"
+    center
+    clearable
+    label="短信验证码"
+    placeholder="请输入短信验证码"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" type="primary" disabled='{{disabled}}' bindtap='counttime'>{{count}}</van-button>
+  </van-field>
+</van-cell-group>
+<view  class='button'>
+<van-button type="primary" bindtap='submit'>认证</van-button>
+</view>

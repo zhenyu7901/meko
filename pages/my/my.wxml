@@ -1,0 +1,92 @@
+<!--pages/my/my.wxml-->
+<view class='user_box'>
+
+    <image src='{{content.avatar}}'></image>
+    <text class='name'>{{content.name}}</text>
+    <view class='id_box' >
+        <text>ID : {{content.code}}</text>
+        <view  wx:if="{{content.sex=='男'}}" class='sex_box'>
+        <image src='/image/男.png'></image>
+        <text style='margin-left:10rpx;color:#01A6FC' >{{age}}</text>
+        </view>
+        <view wx:if="{{content.sex=='女'}}" class='sex_box'>
+                <image src='/image/女.png' ></image>
+        <text style='margin-left:10rpx;color:#FF86B6'>{{age}}</text>
+        </view>
+
+    </view>
+</view>
+<view class='grade'>
+    <text>LV.{{content.level}}</text>
+    <van-progress percentage="{{content.experience}}" show-pivot="{{false}}" color="#FEDC00" />
+</view>
+<view class='rule'>
+    <text>等级规则：\n·每参与一次话题发言，经验+1，每日上限5；\n·成功报名参与一次活动，经验+20</text>
+</view>
+<view class='line'></view>
+<view class='edit' bindtap='tourl'>
+    <text>点击编辑资料</text>
+</view>
+<view wx:if="{{show}}">
+    <view class='line'></view>
+    <view class='list'>
+        <text>认证列表</text>
+    </view>
+    <view style='width:100%;height:4rpx;background:#F5F6FB'></view>
+    <view class='list_box'>
+        <text>手机号</text>
+        <view>
+            <text>已认证</text>
+            <text>未认证</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class='list_box'>
+        <text>身份证</text>
+        <view>
+            <text>已认证</text>
+            <text>未认证</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class='list_box'>
+        <text>其他</text>
+        <view>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class='line'></view>
+    <view class='list'>
+        <text>参与的活动</text>
+    </view>
+    <view style='width:100%;height:4rpx;background:#F5F6FB'></view>
+    <view class='list_box'>
+        <text>活动一</text>
+        <view>
+            <text>已结束</text>
+            <text>未通过</text>
+            <text>审核中</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class='list_box'>
+        <text>活动二</text>
+        <view>
+            <text>已结束</text>
+            <text>未通过</text>
+            <text>审核中</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class='list_box'>
+        <text>活动三</text>
+        <view>
+            <text>已结束</text>
+            <text>未通过</text>
+            <text>审核中</text>
+            <van-icon name="arrow" />
+        </view>
+    </view>
+</view>
+<view class='bottom_box'></view>
+<button class='login_button' bindgetuserinfo='getuserInfo' open-type='getUserInfo' wx:if="{{!userinfo}}"></button>

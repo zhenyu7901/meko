@@ -1,0 +1,51 @@
+/* pages/topic/topic_detail/user_list/user_list.wxss */
+.line{
+    width: 100%;
+    height: 2rpx;
+    background: #F5F6FB;
+}
+.title{
+    font-size: 28rpx;
+    color: #bbb;
+    text-align: center;
+    line-height: 80rpx;
+}
+.list_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40rpx;
+    line-height: 110rpx;
+}
+.left_text{
+    display: flex;
+    align-items: center;
+
+}
+.left_text text{
+    font-size: 28rpx;
+    margin-left: 20rpx;
+}
+.left_text image{
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 72rpx;
+    background: #ccc;
+}
+.right_text{
+    display: flex;
+    align-items: center;
+}
+.right_text text{
+    font-size: 28rpx;
+    border-radius: 6rpx;
+    background: #FEDC00;
+    line-height: 40rpx;
+    padding: 0 20rpx;
+    color: #fff;
+    margin-right: 30rpx;
+}
+.right_text image{
+width: 40rpx;
+height: 40rpx;
+}

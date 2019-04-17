@@ -1,0 +1,86 @@
+/* pages/my/my.wxss */
+.user_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user_box>image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 200rpx;
+    background: #ccc;
+}
+.name{
+    font-size: 32rpx;
+    line-height: 100rpx;
+    font-weight: bold;
+}
+.id_box{
+    display: flex;
+    align-items: center;
+    height: 60rpx;
+       line-height: 60rpx;
+}
+.id_box text{
+    font-size: 28rpx;
+    margin: 0 30rpx;
+ color: #FF4081;
+}
+.id_box image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.grade{
+    padding: 0 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.van-progress{
+    width: 550rpx;
+}
+.grade text{
+    color: #fff;
+    background: #FEDC00;
+    font-size: 28rpx;
+    border-radius: 6rpx;
+    padding: 0 20rpx;
+}
+.rule{
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    color: #A6A6A6;
+    line-height: 60rpx;
+    margin-bottom: 20rpx;
+}
+.line{
+    width: 100%;
+    height: 20rpx;
+    background: #F5F6FB;
+}
+.edit{
+    padding: 0 30rpx;
+    font-size: 36rpx;
+    line-height: 150rpx;
+}
+.list{
+     padding: 0 30rpx;
+    font-size: 36rpx;
+    line-height: 100rpx;
+}
+.list_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    color: #686868;
+}
+.list_box .van-icon{
+    transform: translateY(4rpx)
+}
+.sex_box{
+    display: flex;
+    align-items: center;
+}

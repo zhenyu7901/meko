@@ -1,0 +1,20 @@
+<!--component/topic-item.wxml-->
+<view  wx:for='{{tableList}}' wx:key='{{index}}'>
+<view class='container' style="background:{{item.flag==2?'#F5F6FB':'#fff'}}">
+    <view class='content_box'>
+        <image src='{{item.cover}}' mode="aspectFill"></image>
+        <view class='text_box'>
+        <view class='title'>{{item.theme}}</view>
+        <view>
+                <view class='text'><text decode="{{true}}">{{item.time}}&nbsp;&nbsp;&nbsp;</text><text wx:if="{{url=='plaza'}}">{{item.huifu}}</text></view>
+        <view class='text'><text  decode="{{true}}"> 用户：{{item.userNum}}&nbsp;&nbsp;&nbsp; 回复：{{item.replyNum}}</text></view>
+        </view>
+        </view>
+    </view>
+    <button class='off' wx:if="{{url=='topic_my' && item.flag==1}}" hover-class="none" bindtap='onclose' data-uuid='{{item.topicUuid}}'>关闭</button>
+    <button class='close' wx:if="{{item.flag==2}}" hover-class="none" >已关闭</button>
+    <button class='enter' wx:if="{{item.flag!==0 && item.flag!==2}}"  hover-class="none" bindtap='entertopic' data-uuid='{{item.topicUuid}}'>进入</button>
+    <button class='enter' wx:if="{{ item.flag==0}}"  hover-class="none" >审核中</button>
+</view>
+<view class='line'  style="background:{{item.flag==2?'#fff':'#F5F6FB'}}"></view>
+</view>

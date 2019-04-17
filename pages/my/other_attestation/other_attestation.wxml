@@ -1,0 +1,10 @@
+<!--pages/my/other_attestation/other_attestation.wxml-->
+<view style='width:100%;height:4rpx;background:#F5F6FB'></view>
+<view class='list_box'>
+    <text>学生证</text>
+    <view>
+        <text>已认证</text>
+        <text>未认证</text>
+        <van-icon name="arrow" />
+    </view>
+</view>

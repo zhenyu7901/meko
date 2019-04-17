@@ -1,0 +1,75 @@
+{
+    "pages": [
+
+                "pages/my/phone_attestation/phone_attestation",
+                "pages/my/id_attestation/id_attestation",
+                "pages/plaza/plaza",
+        "pages/publish/publish",
+        "pages/my/data/data",
+        "pages/my/other_attestation/student_attestation/student_attestation",
+        "pages/my/other_attestation/other_attestation",
+
+
+        "pages/my/my",
+        "pages/topic/topic_detail/user_list/user_list",
+        "pages/topic/topic_detail/topic_detail",
+        "pages/topic/topic",
+        "pages/activity/activity",
+        "pages/plaza/search/search"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "usingComponents": {
+        "van-tab": "/dist/tab/index",
+        "van-tabs": "/dist/tabs/index",
+        "van-action-sheet": "/dist/action-sheet/index",
+        "van-tag": "/dist/tag/index",
+        "van-icon": "/dist/icon/index",
+        "van-progress": "/dist/progress/index",
+        "van-field": "/dist/field/index",
+        "van-button": "/dist/button/index",
+        "van-datetime-picker": "/dist/datetime-picker/index",
+        "van-popup": "/dist/popup/index"
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Meko麋谷",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#FEDC00",
+        "borderStyle": "black",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "selectedIconPath": "/image/广场-点击-01.png",
+                "iconPath": "/image/广场-01.png",
+                "pagePath": "pages/plaza/plaza",
+                "text": "广场"
+            },
+            {
+                "selectedIconPath": "/image/活动-点击-01.png",
+                "iconPath": "/image/活动-01.png",
+                "pagePath": "pages/activity/activity",
+                "text": "活动"
+            },
+            {
+                "selectedIconPath": "/image/话题-点击-01.png",
+                "iconPath": "/image/话题-01.png",
+                "pagePath": "pages/topic/topic",
+                "text": "话题"
+            },
+            {
+                "selectedIconPath": "/image/个人-点击-01.png",
+                "iconPath": "/image/个人-01.png",
+                "pagePath": "pages/my/my",
+                "text": "个人"
+            }
+        ]
+    }
+}

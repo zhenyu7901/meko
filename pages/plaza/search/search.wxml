@@ -1,0 +1,13 @@
+<!--pages/plaza/search/search.wxml-->
+<view class='search_box' >
+    <van-search value="{{ condition }}" placeholder="Search" bind:search="onSearch" shape="round"></van-search>
+</view>
+<view class='bottom_box'></view>
+<view wx:if="{{!searchList}}" class='near_text'>
+    <text>附近暂时没有话题~</text>
+</view>
+
+<scroll-view scroll-y='true' bindscrolltolower='lower' style='height:{{height}}px'>
+    <topic-item tableList='{{searchList}}' url="plaza" bindentertopic="entertopic"></topic-item>
+</scroll-view>
+<view class='bottom_box'></view>

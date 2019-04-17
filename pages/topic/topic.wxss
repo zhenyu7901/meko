@@ -1,0 +1,4 @@
+/* pages/topic/topic.wxss */
+.van-action-sheet button{
+    color: #000;
+}

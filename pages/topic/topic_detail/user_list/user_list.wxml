@@ -1,0 +1,18 @@
+<!--pages/topic/topic_detail/user_list/user_list.wxml-->
+<view class='title'>
+    <text>共{{total?total:'0'}}人</text>
+</view>
+<view wx:for="{{tableList}}">
+    <view class='line'></view>
+    <view class='list_box'>
+        <view class='left_text'>
+            <image src='{{item.avatar}}'></image>
+            <text>{{item.name}}</text>
+        </view>
+        <view class='right_text'>
+            <text>LV.{{item.level}}</text>
+            <image src='/image/男.png' wx:if="{{item.sex==1}}"></image>
+            <image src='/image/女.png'  wx:if="{{item.sex==0}}"></image>
+        </view>
+    </view>
+</view>

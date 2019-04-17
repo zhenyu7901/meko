@@ -1,0 +1,24 @@
+<!--pages/topic/topic.wxml-->
+<van-tabs active="{{ active }}" bind:change="onChange" border='{{false}}' color='#FEDC00'>
+    <van-tab title="我发起的话题">
+     <scroll-view scroll-y='true' bindscrolltolower='lower' style='height:{{height}}px'>
+                 <topic-item tableList='{{myList}}' url="topic_my" bindonclose='off' bindentertopic="entertopic"></topic-item>
+            </scroll-view>
+    </van-tab>
+    <van-tab title="我参与的话题">
+     <scroll-view scroll-y='true' bindscrolltolower='lower' style='height:{{height}}px'>
+                         <topic-item tableList='{{myList}}' url="topic"></topic-item>
+            </scroll-view>
+    </van-tab>
+</van-tabs>
+<view class='bottom_box'></view>
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  title="确认关闭话题？"
+  cancel-text="取消"
+  bind:close="onClose"
+   bind:select="onSelect"
+   safe-area-inset-bottom="{{false}}"
+></van-action-sheet>
+<button class='login_button' bindgetuserinfo='getuserInfo' open-type='getUserInfo' wx:if="{{!userinfo}}"></button>

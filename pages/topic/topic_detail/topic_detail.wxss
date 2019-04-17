@@ -1,0 +1,294 @@
+/* pages/topic/topic_detail/topic_detail.wxss */
+.container_box{
+    padding: 40rpx;
+}
+.share_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.share{
+    width: 40rpx;
+    height: 40rpx;
+    background: #FEDC00;
+    box-shadow: 0 0 20rpx rgba(254,220,0,0.5);
+    /* margin-right: 30rpx; */
+}
+.user_box{
+    display: flex;
+    align-items: center;
+}
+.user_box>image{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 90rpx;
+    background: #ccc;
+}
+.name_box{
+    margin-left: 30rpx;
+font-size:24rpx;
+height: 90rpx;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.name_box image{
+    width: 20rpx;
+    height: 20rpx;
+     margin-right: 20rpx;
+}
+.name_box text{
+    margin-right: 20rpx;
+}
+.grade{
+    font-size: 20rpx;
+    background: #FEDC00;
+    color: #fff;
+    border-radius: 4rpx;
+    padding: 0 4rpx;
+}
+.gray{
+    color: #B9B9B9;
+}
+.text_content{
+    font-size: 26rpx;
+    line-height: 40rpx;
+    margin: 30rpx 0;
+}
+.image{
+    width: 670rpx;
+    height: 320rpx;
+    background: #ccc;
+    border-radius: 10rpx;
+}
+.userList_box{
+    margin: 30rpx 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.userList{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.userList image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 80rpx;
+    background: #ccc;
+}
+.userList text{
+    display: block;
+    width: 100rpx;
+    font-size: 18rpx;
+    overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+text-align: center;
+}
+.chat_container{
+    background: #F5F6FB;
+    min-height: 600rpx;
+}
+.chat_input{
+    padding: 0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+}
+.chat_input button{
+    margin: 0;
+    height: 70rpx;
+font-size: 28rpx;
+line-height: 70rpx;
+color: #fff;
+background: #068BDF;
+}
+.chat_input button::after{
+    border: none;
+}
+/* .textarea_box{
+    width: 340rpx;
+    min-height: 60rpx;
+        border: 1px solid #888888;
+            border-radius: 10rpx;
+                margin: 20rpx 0;
+} */
+.chat_input input{
+    width: 340rpx;
+    min-height: 60rpx;
+    line-height: 60rpx;
+    margin: 20rpx 0;
+    background: #fff;
+  border: 1px solid #888888;
+            border-radius: 10rpx;
+                margin: 20rpx 0;
+
+    font-size: 28rpx;
+    font-weight: 400;
+}
+.record{
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 90rpx;
+    background: #068BDF;
+    position: fixed;
+    bottom: 50rpx;
+    left: 400rpx;
+}
+.record image{
+    width: 52rpx;
+    height: 52rpx;
+    margin: 19rpx;
+}
+.picture{
+    width: 70rpx;
+    height: 70rpx;
+    border-radius: 70rpx;
+    background: #068BDF;
+    position: fixed;
+    bottom: 50rpx;
+    left: 510rpx;
+}
+.picture image{
+        width: 42rpx;
+    height: 42rpx;
+    margin: 14rpx;
+}
+.comment_box{
+    display: flex;
+    align-items: center;
+    padding: 0 40rpx;
+
+}
+.usercomment{
+        height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100rpx;
+}
+.usercomment image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 80rpx;
+    background: #ccc;
+}
+.usercomment text{
+    display: block;
+    width: 100rpx;
+    font-size: 18rpx;
+    overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+text-align: center;
+}
+.inside{
+    width:0;
+    height:0;
+    border-top:20rpx solid transparent;
+    border-bottom:20rpx solid transparent;
+    border-right:20rpx solid #fff;
+    position: absolute;
+    top: 30rpx;
+    left: -20rpx;
+}
+.comment_text{
+    box-sizing: border-box;
+    position: relative;
+    padding: 30rpx;
+    max-width: 460rpx;
+    background: #fff;
+    min-height: 100rpx;
+    /* line-height: 60rpx; */
+    font-size: 30rpx;
+    border-radius: 10rpx;
+    margin-left: 50rpx;
+}
+.comment_text text{
+    line-height: 40rpx;
+}
+.comment_audio{
+     box-sizing: border-box;
+    position: relative;
+    text-align: right;
+    width: 300rpx;
+    height: 100rpx;
+    background: #fff;
+        border-radius: 10rpx;
+            margin-left: 50rpx;
+}
+.comment_audio image{
+    margin: 25rpx;
+    width: 50rpx;
+    height: 50rpx;
+    float: right;
+}
+.comment-img image{
+    width: 460rpx;
+    height: 240rpx;
+    border-radius: 20rpx;
+    background: #ccc;
+    margin: 10rpx 0;
+margin-left: 50rpx;
+}
+.fenxiang_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fenxiang_box button{
+    background: #fff;
+margin: 0;
+}
+.fenxiang_box button::after{
+    border: none;
+}
+.fenxiang_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30rpx;
+    padding: 60rpx 0;
+}
+.fenxiang_content image{
+    width: 100rpx;
+    height: 100rpx;
+margin-bottom: 30rpx;
+}
+.canvas-poster{
+  position: fixed;
+  left: -10000px; 
+}
+.popup_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.share_image{
+    width: 600rpx;
+    height: 940rpx;
+
+}
+.popup_box button{
+     width:200rpx;
+     height: 80rpx;
+     font-size: 30rpx;
+     line-height: 80rpx;
+    color: #fff;
+    background: #FEDC00;
+    margin: 40rpx 0;
+}
+.popup_box button::after{
+    border: none;
+}

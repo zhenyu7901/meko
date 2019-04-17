@@ -1,0 +1,45 @@
+/* pages/activity/activity.wxss */
+.content_box{
+    width: 100%;
+    min-height: 1500rpx;
+    background: #FEDC00;
+    padding-top: 40rpx;
+}
+.active_box{
+    width: 680rpx;
+    margin: 80rpx auto;
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 30rpx 0;
+}
+.active_box image{
+    width: 640rpx;
+    height: 400rpx;
+    margin: 0 auto;
+    margin-bottom: 30rpx;
+    display: block;
+    border-radius: 15rpx;
+}
+.line{
+    width: 100%;
+    height: 4rpx;
+    background: #E5E5E5;
+}
+.text_content{
+    font-size: 32rpx;
+    padding: 20rpx;
+    line-height: 50rpx;
+}
+.apply{
+    width: 360rpx;
+    height: 80rpx;
+    font-size: 36rpx;
+    line-height: 80rpx;
+    color: #fff;
+    background: #FEDC00;
+    margin: 20rpx auto;
+    box-shadow: 0 0 20rpx #FEDC00;
+}
+.apply::after{
+    border: none;
+}

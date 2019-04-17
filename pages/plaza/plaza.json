@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "van-search": "/dist/search/index",
+      "topic-item":"../../component/topic-item"
+  }
+}

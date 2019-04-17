@@ -1,0 +1,89 @@
+<!--pages/topic/topic_detail/topic_detail.wxml-->
+<view class='container_box'>
+    <view class='share_box'>
+        <view class='user_box'>
+            <image src='{{content.avatar}}'></image>
+            <view class='name_box'>
+                <view>{{content.name}}</view>
+                <view>
+                    <text class='grade'>LV.{{content.level}}</text>
+                    <image src='../../../image/女.png' wx:if="{{content.sex==0}}"></image>
+                    <image src='../../../image/男.png' wx:if="{{content.sex==1}}"></image>
+                    <text class='gray'>{{content.distance}}</text>
+                    <text class='gray'>{{content.time}}</text>
+                </view>
+            </view>
+        </view>
+        <image src='../../../image/分享.png' class='share' bindtap='onshare'></image>
+    </view>
+    <view class='text_content'>
+        <text>{{content.description}}</text>
+    </view>
+    <image src='{{content.cover}}' class='image' mode="aspectFill"></image>
+    <view class='userList_box' bindtap='tourl'>
+        <view wx:for="{{content.users}}" class='userList' wx:key="index">
+            <image src='{{item.avatar}}'></image>
+            <text>{{item.name}}</text>
+        </view>
+        <van-icon name="arrow" />
+    </view>
+</view>
+<view class='chat_container'>
+    <scroll-view scroll-y='true' bindscrolltolower='lower' style='height:{{height}}px'>
+        <view wx:for="{{comment}}" wx:key="index" class='comment_box'>
+            <view class='usercomment'>
+                <image src="{{item.avatar}}"></image>
+                <text>{{item.name}}fasdf</text>
+            </view>
+            <view class='comment_text' wx:if="{{item.type==0}}">
+                <view class='inside'></view>
+                <text>{{item.content}}</text>
+            </view>
+            <view class='comment-img' wx:if="{{item.type==1}}">
+                <image src='{{item.content}}' mode="aspectFill"></image>
+            </view>
+            <view class='comment_audio' style='text-align:right;' bindtap='startaudio' data-src="{{item.content}}" wx:if="{{item.type==2}}">
+                <image src='../../../image/语音.png'></image>
+            </view>
+            <!-- <audio id='myaudio'></audio> -->
+        </view>
+    </scroll-view>
+    <view class='bottom_box'></view>
+</view>
+<view class='chat_input'>
+    <!-- <view class='textarea_box'> -->
+    <input value='{{inputvalue}}' bindinput='getvalue' placeholder='发射你的想法......' auto-height></input>
+    <!-- </view> -->
+    <view class='record' bindtouchstart='startrecord' bindtouchmove='closerecord' bindtouchend='endrecord' catchtap='short'>
+        <image src='/image/录音.png'></image>
+    </view>
+    <view class='picture' bindtap='selectimg'>
+        <image src='/image/图片.png'></image>
+    </view>
+    <button bindtap='onsub' data-type="{{0}}">发送</button>
+</view>
+<canvas class="canvas-poster" id="canvasPoster" style="width:750rpx;height:1180rpx" canvas-id="canvasPoster"></canvas>
+<van-action-sheet show="{{ show }}" title="分享">
+    <view class='fenxiang_box'>
+        <button open-type='share'>
+            <view class='fenxiang_content'>
+                <image src='../../../image/weixin.png'></image>
+                <text>微信好友</text>
+            </view>
+        </button>
+        <button bindtap='makeimg'>
+            <view class='fenxiang_content'>
+                <image src='../../../image/peng.png'></image>
+                <text>朋友圈</text>
+            </view>
+        </button>
+    </view>
+</van-action-sheet>
+<van-popup show="{{ imageshow }}" bind:close="onClose">
+    <view class='popup_box'>
+        <image src='{{savedImgUrl}}' class='share_image'></image>
+        <button class='share_button' bindtap='saveImageToPhoto'>保存图片</button>
+    </view>
+</van-popup>
+
+<button class='login_button' bindgetuserinfo='getuserInfo' open-type='getUserInfo' wx:if="{{!userinfo}}"></button>

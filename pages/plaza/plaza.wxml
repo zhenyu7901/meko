@@ -1,0 +1,36 @@
+<!--pages/plaza/plaza.wxml-->
+<view class='search_box' wx:if="{{searchShow}}">
+    <van-search value="{{ value }}" placeholder="Search" bind:search="onSearch" shape="round" ></van-search>
+</view>
+<van-tabs active="{{ active }}" bind:change="onChange" border='{{false}}' color='#FEDC00'>
+    <van-tab title="广场">
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+                <swiper-item width='100%'>
+                    <image src="{{item}}" class="slide-image" height="150" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class='title container'>官方话题</view>
+        <topic-item tableList='{{officialList}}' url="plaza" bindentertopic="entertopic"></topic-item>
+        <view class='line'></view>
+        <view class='title container'>热门话题</view>
+        <topic-item tableList='{{hotList}}' url="plaza" bindentertopic="entertopic"></topic-item>
+    </van-tab>
+    <van-tab title="附近">
+        <view wx:if="{{!nearList}}" class='near_text'>
+            <text>附近暂时没有话题~</text>
+        </view>
+        <scroll-view scroll-y='true' bindscrolltolower='lower' style='height:{{height}}px'>
+            <topic-item tableList='{{nearList}}' url="plaza" bindentertopic="entertopic"></topic-item>
+        </scroll-view>
+    </van-tab>
+</van-tabs>
+<view class='upload_box' bindtap='toupload'>
+   <van-icon name="plus" class='plus' />
+</view>
+
+
+
+<view class='bottom_box'></view>
+<button class='login_button' bindgetuserinfo='getuserInfo' open-type='getUserInfo' wx:if="{{!userinfo}}"></button>

@@ -1,0 +1,27 @@
+/* pages/my/other_attestation/student_attestation/student_attestation.wxss */
+.image{
+width: 500rpx;
+height: 360rpx;
+border-radius: 20rpx;
+background: #ccc;
+margin: 0 auto;
+display: block;
+font-size: 28rpx;
+}
+.image text{
+padding: 100rpx 0;
+display: block;
+line-height: 80rpx;
+width: 300rpx;
+margin: 0 auto;
+text-align: center;
+}
+.content_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.van-button{
+    width: 500rpx;
+    margin-top: 100rpx;
+}

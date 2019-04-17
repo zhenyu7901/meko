@@ -1,0 +1,41 @@
+/* pages/my/data/data.wxss */
+.list_box{
+    line-height: 100rpx;
+    padding: 0 40rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+}
+.list_box image{
+width: 80rpx;
+height: 80rpx;
+border-radius: 80rpx;
+background: #ccc;
+}
+.name{
+    width: 500rpx;
+    text-align: right;
+    
+}
+.list_right{
+    display: flex;
+    align-items: center;
+}
+.list_right .van-icon{
+      transform: translateY(6rpx);
+      margin-left: 40rpx;
+}
+.baocun{
+    width: 340rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    line-height: 80rpx;
+    background: #FEDC00;
+    color: #fff;
+    margin-top: 60rpx;
+}
+.baocun::after{
+    border: none;
+}

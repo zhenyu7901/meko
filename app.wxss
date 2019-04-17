@@ -1,0 +1,17 @@
+/**app.wxss**/
+.container {
+padding: 0 30rpx;
+} 
+.bottom_box{
+    width: 100%;
+    height: 200rpx;
+}
+.login_button{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+opacity: 0;
+    z-index: 1000;
+}

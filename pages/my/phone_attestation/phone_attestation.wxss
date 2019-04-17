@@ -1,0 +1,10 @@
+/* pages/my/phone_attestation/phone_attestation.wxss */
+.button .van-button{
+    
+    width: 600rpx;
+margin-top: 100rpx;
+}
+.button{
+    width: 100%;
+    text-align: center;
+}

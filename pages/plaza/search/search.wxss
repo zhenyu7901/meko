@@ -1,0 +1,15 @@
+/* pages/plaza/search/search.wxss */
+.search_box{
+    width: 90%;
+    /* margin: 0 5%; */
+    position: fixed;
+    top: 0;
+    left: 5%;
+}
+.near_text{
+    margin-top: 200rpx;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    text-align: center;
+    color: #999;
+}

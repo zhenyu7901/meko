@@ -1,0 +1,20 @@
+<!--pages/activity/activity.wxml-->
+<view class='content_box'>
+    <view wx:for='{{tableList}}' wx:key='{{index}}' class='active_box'>
+        <image src='{{item.src}}'></image>
+        <view class='line'></view>
+        <view class='text_content'>
+            <text>地点：{{item.address}}\n</text>
+            <text>报名时间：{{item.address}}\n</text>
+            <text>活动时间：{{item.address}}\n</text>
+            <text>面向人群：{{item.address}}\n</text>
+            <text>活动内容：\n</text>
+            <text style='padding-left:40rpx;display:block'>{{item.address}}</text>
+        </view>
+            <button class='apply' bindtap='getQrcode'>我要报名</button>
+    </view>
+<view class='bottom_box'></view>
+</view>
+
+
+<button class='login_button' bindgetuserinfo='getuserInfo' open-type='getUserInfo' wx:if="{{!userinfo}}"></button>
